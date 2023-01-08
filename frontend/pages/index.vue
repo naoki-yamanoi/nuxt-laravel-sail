@@ -1,56 +1,24 @@
 <template>
-  <section class="section">
-    <div class="columns is-mobile">
-      <card
-        title="Free"
-        icon="github"
-      >
-        Open source on <a href="https://github.com/buefy/buefy">
-          GitHub
-        </a>
-      </card>
-
-      <card
-        title="Responsive"
-        icon="cellphone-link"
-      >
-        <b class="has-text-grey">
-          Every
-        </b> component is responsive
-      </card>
-
-      <card
-        title="Modern"
-        icon="alert-decagram"
-      >
-        Built with <a href="https://vuejs.org/">
-          Vue.js
-        </a> and <a href="http://bulma.io/">
-          Bulma
-        </a>
-      </card>
-
-      <card
-        title="Lightweight"
-        icon="arrange-bring-to-front"
-      >
-        No other internal dependency
-      </card>
-    </div>
-    <div>
-      {{ data }}
-    </div>
-  </section>
+  <Tutorial />
 </template>
 
-<script>
-import Card from '~/components/Card'
+<script lang="ts">
+import Vue from 'vue'
 
+export default Vue.extend({
+  name: 'IndexPage'
+})
+</script>
+<template>
+  <div>
+    <h1 class="text-5xl font-bold underline">
+      {{ data }}
+    </h1>
+  </div>
+</template>
+
+<script lang="ts">
 export default {
-  name: 'IndexPage',
-  components: {
-    Card
-  },
   async asyncData(app) {
     const data = await app.$axios.$get('http://localhost:80/api')
     return {
@@ -59,3 +27,6 @@ export default {
   }
 }
 </script>
+
+<style ${2|scoped,|} lang="scss">
+</style>
