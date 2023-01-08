@@ -33,3 +33,5 @@ proxy: {
   "/api": 'http://localhost:80'
 },
 ```
+#### tailwind css エラー
+https://github.com/nuxt/framework/issues/9115
