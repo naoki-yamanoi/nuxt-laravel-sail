@@ -37,9 +37,6 @@
         No other internal dependency
       </card>
     </div>
-    <div>
-      {{ data }}
-    </div>
   </section>
 </template>
 
@@ -50,12 +47,6 @@ export default {
   name: 'IndexPage',
   components: {
     Card
-  },
-  async asyncData(app) {
-    const data = await app.$axios.$get('http://localhost:80/api')
-    return {
-      data
-    }
   }
 }
 </script>
