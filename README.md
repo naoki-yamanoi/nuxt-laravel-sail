@@ -2,7 +2,10 @@
 #### laravel sail インストール
 ```
 curl -s "https://laravel.build/backend" | bash
+```
 
+#### コンテナ起動
+```
 cd backend
 sail up -d
 ```
@@ -34,4 +37,6 @@ proxy: {
 },
 ```
 #### tailwind css エラー
+```
 https://github.com/nuxt/framework/issues/9115
+```
