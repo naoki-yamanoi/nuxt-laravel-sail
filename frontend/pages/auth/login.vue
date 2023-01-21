@@ -34,7 +34,7 @@ import Axios from 'axios';
     },
     methods: {
       async asyncData() {
-        const response = await Axios.get('http://localhost:80/api/');
+        const response = await Axios.get('http://localhost:80/api/owner');
         this.test = response.data;
       }
     }
